@@ -21,7 +21,7 @@ Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres
   - Interesting. Comes with hCaptcha too. 'Works well as a Kubernetes side car.'
 - [binserve](https://github.com/mufeedvh/binserve): A fast, secure, and easy to set up static web server written on top of Actix Web with routing, templating, and various other features.
 - ***[Bloom](https://github.com/skerkour/bloom-legacy): The simplest way to de-Google your life and business: Inbox, Calendar, Files, Contacts & much more.***
-  - [It uses Vuetify 2 + Axios](https://github.com/skerkour/bloom-legacy/blob/fa91a0fcfb779a5657cbbbfaf9ea305e79570122/webapp/package.json)
+  - [It uses Vuetify 2 (EOL) + Axios](https://github.com/skerkour/bloom-legacy/blob/fa91a0fcfb779a5657cbbbfaf9ea305e79570122/webapp/package.json)
 - [Contile](https://github.com/mozilla-services/contile): The back-end server for the Mozilla Tile Service (MTS).
 - [Dalted](https://github.com/carrascomj/dalted): Simple webapp that showcases the integration of [image-rs](https://github.com/image-rs/image) with Actix Web for color blindness simulations.
 - [Four in a Row - Server](https://github.com/ffactory-ofcl/fourinarow-server): An online version of the popular game four in a row, written in Rust on the server side and Flutter + Dart on the client.
