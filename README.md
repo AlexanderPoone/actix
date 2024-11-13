@@ -1,7 +1,7 @@
 [Monorepo: Ease of code reuse](https://en.wikipedia.org/wiki/Monorepo)
 
 ## Usage
-* [actix_cors::Cors::default()](cors/backend/src/main.rs)
+* [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new( ... ) }`
 * [deadpool_postgres::Client.prepare(&_stmt)](databases/postgres/src/db.rs) `-> Result<Vec<User>, MyError>`
 * [pg_mapper](cors/backend/src/main.rs)
 
