@@ -6,7 +6,10 @@ Forked this repo to learn actix-web.
 
 ***actix + Vue is a popular and perfect combo***
 
-[thirtyfour](https://github.com/Vrtgs/thirtyfour) `goto()`, `find()`, supports `send_keys()`
+----
+Refactor feedback management system
+
+using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `find()`, supports `send_keys()`) as backend
 ```rust
 use thirtyfour::prelude::*;
 
