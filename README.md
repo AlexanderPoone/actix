@@ -53,11 +53,11 @@ Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres
 ```rust
 let pool = PgPoolOptions::new()
     .max_connections(5)
-    .connect("postgres://postgres:password@localhost/test").await?;        // Get this from ENV
+    .connect("postgres://postgres:password@localhost/test").await?;        // Alex: Get this from ENV
 
 // Make a simple query to return the given parameter (use a question mark `?` instead of `$1` for MySQL/MariaDB)
 let row: (i64,) = sqlx::query_as("SELECT $1")
-    .bind(150_i64)
+    .bind(150_i64)                                                         // Alex: This is even nicer than SQLAlchemy in Python
     .fetch_one(&pool).await?;
 
 assert_eq!(row.0, 150);
