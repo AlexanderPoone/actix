@@ -12,7 +12,7 @@ Refactor feedback management system
 using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `find()`, supports `send_keys()`) as backend
 ```rust
 // 1. GoMa
-// 2. TrAd
+// 2. TrAd (bit trickier. searchbox can't be triggered)
 // 3. TrPi
 
 use thirtyfour::prelude::*;
