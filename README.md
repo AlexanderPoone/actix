@@ -18,7 +18,7 @@ using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `fi
 use thirtyfour::prelude::*;
 
 #[tokio::main]
-async fn main() -> WebDriverResult<()> {                             <------ called by Actix, should stream progress !
+async fn main() -> WebDriverResult<()> {                          // <------ called by Actix, should stream progress !
  let caps = DesiredCapabilities::chrome();
  let driver = WebDriver::new("http://localhost:9515", caps).await?;
 
