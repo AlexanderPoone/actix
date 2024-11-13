@@ -68,7 +68,7 @@ cf. [Ungoliant: rayon + reqwest](https://github.com/oscar-project/ungoliant/blob
 * [pg_mapper](cors/backend/src/main.rs)
 
 ## Community Showcase
-Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres, e.g., `sqlx::postgres::PgPoolOptions` (Pg for Postgrs):
+Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres, e.g., `sqlx::postgres::PgPoolOptions` (Pg for Postgres):
 ```rust
 use sqlx::postgres::PgPoolOptions;
 
