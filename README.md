@@ -5,6 +5,8 @@ Forked this repo to learn actix-web.
 
 ***actix + Vue is a popular and perfect combo***
 
+There's also a [chat sample](websockets/chat/static/index.html) parallel to Rocket's!
+
 ----
 Refactor feedback management system
 
