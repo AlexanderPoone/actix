@@ -5,6 +5,7 @@
 ## Usage
 * [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new().wrap( ... ) }` ***CORS is also a Vite/Vue example !!!***
 * [deadpool_postgres::Client.prepare(&_stmt)](databases/postgres/src/db.rs) `-> Result<Vec<User>, MyError>`
+* `client.query(&stmt, &[&user_info.email, &user_info.first_name, &user_info.last_name, &user_info.username,],)`
 * [pg_mapper](cors/backend/src/main.rs)
 
 ## Community Showcase
