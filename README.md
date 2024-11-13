@@ -31,6 +31,8 @@ async fn main() -> WebDriverResult<()> {
 
  // Type in the search terms.
  elem_text.send_keys("selenium").await?;
+ elem_text.send_keys(Key::Control + "a").await?;
+ elem_text.send_keys("thirtyfour" + Key::Enter).await?;
 
  // Click the search button.
  let elem_button = elem_form.find(By::Css("button[type='submit']")).await?;
