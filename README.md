@@ -1,3 +1,6 @@
+[actix_cors::Cors](cors/backend/src/main.rs)
+[deadpool_postgres::Client](databases/postgres/src/db.rs)
+
 ## Community Showcase
 
 - [Actix-Web Shuttle Template](https://github.com/sentinel1909/shuttle-templat-actix): A somewhat opinionated template for getting started with an Actix Web API and hosting it on Shuttle.
