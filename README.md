@@ -20,7 +20,7 @@ using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `fi
 ////////////////////////
 // Basic features:
 // a. Siame Netwo Simil (Keywo Searc)
-// b. Siame Netwo Simil (Dupli Remov, mostl hate comme)
+// b. Siame Netwo Simil (Dupli Remov, mostl hate speec)
 // c. Gende
 // d. Natio
 // e. Spam Remov
