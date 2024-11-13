@@ -5,7 +5,7 @@ Forked this repo to learn actix-web.
 
 ***actix + Vue is a popular and perfect combo***
 
-There's also a [chat sample](websockets/chat/static/index.html) parallel to Rocket's!
+There's also a [chat sample](websockets/chat/static/index.html) parallel to Rocket's! `const socket = new WebSocket(wsUri);` vs `const events = new EventSource(uri); events.addEventListener("message", (ev) => { ... }));` 'Exponential backoff reconnect'
 
 ----
 Refactor feedback management system
