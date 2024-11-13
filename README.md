@@ -6,7 +6,7 @@ Forked this repo to learn actix-web.
 
 ***actix + Vue is a popular and perfect combo***
 
-[thirtyfour](https://github.com/Vrtgs/thirtyfour)
+[thirtyfour](https://github.com/Vrtgs/thirtyfour) `goto()`, `find()`, supports `send_keys()`
 
 [Ungoliant: rayon + reqwest](https://github.com/oscar-project/ungoliant/blob/main/Cargo.toml)
 
