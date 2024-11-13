@@ -1,5 +1,7 @@
 [Monorepo: Ease of code reuse](https://en.wikipedia.org/wiki/Monorepo)
 
+***actix + Vue is a popular and perfect combo***
+
 ## Usage
 * [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new( ... ) }` ***CORS is also a Vite/Vue example !!!***
 * [deadpool_postgres::Client.prepare(&_stmt)](databases/postgres/src/db.rs) `-> Result<Vec<User>, MyError>`
