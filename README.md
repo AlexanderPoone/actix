@@ -3,7 +3,7 @@
 ***actix + Vue is a popular and perfect combo***
 
 ## Usage
-* [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new( ... ) }` ***CORS is also a Vite/Vue example !!!***
+* [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new().wrap( ... ) }` ***CORS is also a Vite/Vue example !!!***
 * [deadpool_postgres::Client.prepare(&_stmt)](databases/postgres/src/db.rs) `-> Result<Vec<User>, MyError>`
 * [pg_mapper](cors/backend/src/main.rs)
 
