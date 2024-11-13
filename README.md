@@ -68,8 +68,10 @@ cf. [Ungoliant: rayon + reqwest](https://github.com/oscar-project/ungoliant/blob
 * [pg_mapper](cors/backend/src/main.rs)
 
 ## Community Showcase
-Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres, e.g., `sqlx::postgres::PgPoolOptions`:
+Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres, e.g., `sqlx::postgres::PgPoolOptions` (Pg for Postgrs):
 ```rust
+use sqlx::postgres::PgPoolOptions;
+
 let pool = PgPoolOptions::new()
     .max_connections(5)
     .connect("postgres://postgres:password@localhost/test").await?;        // Alex: Get this from ENV
