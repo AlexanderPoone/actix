@@ -11,14 +11,14 @@
 - [Atomic-Server](https://github.com/joepio/atomic-data-rust/): Graph database with a dynamic schema, authorization and full text search.
 - [Barricade](https://github.com/purton-tech/barricade): Quickly add user registration and logon to any application.
 - [binserve](https://github.com/mufeedvh/binserve): A fast, secure, and easy to set up static web server written on top of Actix Web with routing, templating, and various other features.
-- [Bloom](https://github.com/skerkour/bloom): The simplest way to de-Google your life and business: Inbox, Calendar, Files, Contacts & much more.
+**- [Bloom](https://github.com/skerkour/bloom-legacy): The simplest way to de-Google your life and business: Inbox, Calendar, Files, Contacts & much more.**
 - [Contile](https://github.com/mozilla-services/contile): The back-end server for the Mozilla Tile Service (MTS).
 - [Dalted](https://github.com/carrascomj/dalted): Simple webapp that showcases the integration of [image-rs](https://github.com/image-rs/image) with Actix Web for color blindness simulations.
 - [Four in a Row - Server](https://github.com/ffactory-ofcl/fourinarow-server): An online version of the popular game four in a row, written in Rust on the server side and Flutter + Dart on the client.
 - [gcs-proxy](https://github.com/guaychou/gcs-proxy): A Google Cloud Storage download proxy
 - [GitArena](https://github.com/mellowagain/gitarena): Software development platform with built-in VCS, issue tracking and code review.
 - [hyperswitch](https://github.com/juspay/hyperswitch): An Open Source Financial Switch to make payment open, fast, secure and reliable.
-- [Labrinth](https://github.com/modrinth/labrinth): Rust-based backend to serve the `modrinth` API.
+**- [Labrinth](https://github.com/modrinth/labrinth): Rust-based backend to serve the `modrinth` API.**
 - [lemmy](https://github.com/dessalines/lemmy): A federated alternative to reddit in Rust.
 - [Martin](https://github.com/maplibre/martin): Blazing fast and lightweight PostGIS, MBtiles and PMtiles tile server.
 - **[mCaptcha](https://github.com/mCaptcha/mCaptcha/): Proof of work based, privacy focused, libre CAPTCHA system. Crates used: `actix-web`, `sqlx`, `redis`, and `lettre`.**
