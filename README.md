@@ -6,7 +6,7 @@
 * [pg_mapper](cors/backend/src/main.rs)
 
 ## Community Showcase
-Many of these repos use SQLX for Postgres.
+Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres, e.g., `sqlx::postgres::PgPoolOptions`.
 
 - [Actix-Web Shuttle Template](https://github.com/sentinel1909/shuttle-templat-actix): A somewhat opinionated template for getting started with an Actix Web API and hosting it on Shuttle.
 - [Atomic-Server](https://github.com/joepio/atomic-data-rust/): Graph database with a dynamic schema, authorization and full text search.
