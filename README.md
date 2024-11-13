@@ -24,15 +24,15 @@
 - ***[mCaptcha](https://github.com/mCaptcha/mCaptcha/): Proof of work based, privacy focused, libre CAPTCHA system. Crates used: `actix-web`, `sqlx`, `redis`, and `lettre`.***
 - [MeiliSearch](https://github.com/meilisearch/MeiliSearch): Fast, Relevant and Typo-Tolerant Search Engine. Open source alternative to Algolia.
 - [Merino](https://github.com/mozilla-services/merino): Web service for Firefox Suggest.
-- [Nitro Repo](https://github.com/wherkamp/nitro_repo): An open source artifact manager. Rust back-end and Vue front-end.
+- [Nitro Repo](https://github.com/wherkamp/nitro_repo): An open source artifact manager. ***Rust back-end and Vue front-end.***
 - [Operator](https://github.com/mkantor/operator): A web server for static and dynamic content.
 - [pict-rs](https://git.asonix.dog/asonix/pict-rs): An image host API service
 - [RCOS Telescope](https://github.com/rcos/Telescope): The RCOS website and Discord bot.
 - [Roseline](https://github.com/DoumanAsh/roseline.rs): A personal web site and discord & IRC bot to access simple SQLite database. Demonstrates usage of various Actix and Actix Web concepts.
-- [rustus](https://github.com/s3rius/rustus): A [TUS - the open protocol for resumable file uploads](https://github.com/tus/tusd) implementation that helps you handle file uploads
+- [rustus](https://github.com/s3rius/rustus): A ***[TUS - the open protocol for resumable file uploads](https://github.com/tus/tusd)*** implementation that helps you handle file uploads
 - [rustypaste](https://github.com/orhun/rustypaste): A minimal file upload/pastebin service
 - [tokei.rs](https://github.com/XAMPPRocky/tokei_rs): The tokei.rs server code.
-- [trieve](https://github.com/devflowinc/trieve): All-in-one infrastructure for building search, recommendations, and RAG.
+- [trieve](https://github.com/devflowinc/trieve): All-in-one infrastructure for building search, recommendations, and ***Retrieval Augmented Generation (RAG)***.
 - [Triox](https://github.com/Trioxidation/Triox): A free file hosting server that focuses on speed, reliability and security.
 - [WebThings Registration Server](https://github.com/WebThingsIO/registration_server): Exposes an HTTP API that lets you register a WebThings Gateway for tunneling support
 - [Zero2prod](https://github.com/LukeMathWalker/zero-to-production/): Source code of zero to production book [zero2prod.com](https://www.zero2prod.com). Paid book but some of the chapters are available online for free. The book compares and explains the chosen technologies, like Actix Web and SQLx.
