@@ -52,7 +52,7 @@ async fn main() -> WebDriverResult<()> {
 ## BYOT: Build Your Own Tools
 
 ## Usage
-* [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new().wrap( ... ) }` ***CORS is also a Vite/Vue example !!! This is also a 'log in' sample.***
+* [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new().wrap( ... ) }` ***CORS is also a [Vue ^3.3.4](https://github.com/AlexanderPoone/actix/blob/master/cors/frontend/package.json) sample !!! This is also a 'log in' sample.***
 * [deadpool_postgres::Client.prepare(&_stmt)](databases/postgres/src/db.rs) `-> Result<Vec<User>, MyError>`
 * `client.query(&stmt, &[&user_info.email, &user_info.first_name, &user_info.last_name, &user_info.username,],)`
 * [pg_mapper](cors/backend/src/main.rs)
