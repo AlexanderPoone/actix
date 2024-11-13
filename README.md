@@ -13,6 +13,12 @@ using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `fi
 // 1. GoMa
 // 2. TrAd (bit trickier. searchbox can't be triggered)
 // 3. TrPi
+////////////////////////
+// Siame Netwo Simil (Keywo Searc)
+// Siame Netwo Simil (Dupli Remov, mostl hate comme)
+// Gende
+// Natio
+// Spam Remov
 
 use thirtyfour::prelude::*;
 
