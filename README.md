@@ -18,23 +18,19 @@ using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `fi
 use thirtyfour::prelude::*;
 
 #[tokio::main]
-async fn main() -> WebDriverResult<()> {
+async fn main() -> WebDriverResult<()> {                             <------ called by Actix, should stream progress !
  let caps = DesiredCapabilities::chrome();
  let driver = WebDriver::new("http://localhost:9515", caps).await?;
 
- // Navigate to https://wikipedia.org.
  driver.goto("https://wikipedia.org").await?;
  let elem_form = driver.find(By::Id("search-form")).await?;
 
- // Find element from element.
  let elem_text = elem_form.find(By::Id("searchInput")).await?;
 
- // Type in the search terms.
  elem_text.send_keys("selenium").await?;
  elem_text.send_keys(Key::Control + "a").await?;
  elem_text.send_keys("thirtyfour" + Key::Enter).await?;
 
- // Click the search button.
  let elem_button = elem_form.find(By::Css("button[type='submit']")).await?;
  elem_button.click().await?;
 
