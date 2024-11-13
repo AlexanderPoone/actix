@@ -25,6 +25,7 @@ using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `fi
 ////////////////////////
 
 use thirtyfour::prelude::*;
+use std::{thread, time::Duration};
 
 #[tokio::main]
 async fn main() -> WebDriverResult<()> {                          // <------ called by Actix, should stream progress !
@@ -37,7 +38,9 @@ async fn main() -> WebDriverResult<()> {                          // <------ cal
  let elem_text = elem_form.find(By::Id("searchInput")).await?;
 
  elem_text.send_keys("selenium").await?;
+ thread::sleep(Duration::from_millis(1500));
  elem_text.send_keys(Key::Control + "a").await?;
+ thread::sleep(Duration::from_millis(500));
  elem_text.send_keys("thirtyfour" + Key::Enter).await?;
 
  let elem_button = elem_form.find(By::Css("button[type='submit']")).await?;
