@@ -27,6 +27,7 @@ Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres
 - [Four in a Row - Server](https://github.com/ffactory-ofcl/fourinarow-server): An online version of the popular game four in a row, written in Rust on the server side and Flutter + Dart on the client.
 - [gcs-proxy](https://github.com/guaychou/gcs-proxy): A Google Cloud Storage download proxy
 - [GitArena](https://github.com/mellowagain/gitarena): Software development platform with built-in VCS, issue tracking and code review.
+  - vs. GitLab self-hosted, and Gitea (written in Go, 45k stars)
 - [hyperswitch](https://github.com/juspay/hyperswitch): An Open Source Financial Switch to make payment open, fast, secure and reliable.
 - ***[Labrinth](https://github.com/modrinth/labrinth): Rust-based backend to serve the `modrinth` API.***
 - [lemmy](https://github.com/dessalines/lemmy): A federated alternative to reddit in Rust.
