@@ -49,7 +49,7 @@ async fn main() -> WebDriverResult<()> {
 }
 ```
 
-[Ungoliant: rayon + reqwest](https://github.com/oscar-project/ungoliant/blob/main/Cargo.toml)
+cf. [Ungoliant: rayon + reqwest](https://github.com/oscar-project/ungoliant/blob/main/Cargo.toml) (actix + thirtyfour + rayon)
 
 ## BYOT: Build Your Own Tools
 
