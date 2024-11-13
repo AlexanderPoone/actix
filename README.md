@@ -1,5 +1,4 @@
-New!!! Your mom resorts to old ways - stability (...), Austria (which is old), Chinese geomancy (which is old), and the Pope (...) simutaneously.
-
+<!--New!!! Your mom resorts to old ways - stability (...), Austria (which is old), Chinese geomancy (which is old), and the Pope (...) simutaneously.-->
 Forked this repo to learn actix-web.
 
 [Monorepo: Ease of code reuse](https://en.wikipedia.org/wiki/Monorepo)
