@@ -29,7 +29,7 @@
 - [pict-rs](https://git.asonix.dog/asonix/pict-rs): An image host API service
 - [RCOS Telescope](https://github.com/rcos/Telescope): The RCOS website and Discord bot.
 - [Roseline](https://github.com/DoumanAsh/roseline.rs): A personal web site and discord & IRC bot to access simple SQLite database. Demonstrates usage of various Actix and Actix Web concepts.
-- [rustus](https://github.com/s3rius/rustus): A TUS protocol implementation that helps you handle file uploads
+- [rustus](https://github.com/s3rius/rustus): A [TUS - the open protocol for resumable file uploads](https://github.com/tus/tusd) implementation that helps you handle file uploads
 - [rustypaste](https://github.com/orhun/rustypaste): A minimal file upload/pastebin service
 - [tokei.rs](https://github.com/XAMPPRocky/tokei_rs): The tokei.rs server code.
 - [trieve](https://github.com/devflowinc/trieve): All-in-one infrastructure for building search, recommendations, and RAG.
