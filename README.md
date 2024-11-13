@@ -17,8 +17,21 @@ Forked this repo to learn actix-web.
 * [pg_mapper](cors/backend/src/main.rs)
 
 ## Community Showcase
-Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres, e.g., `sqlx::postgres::PgPoolOptions`.
+Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres, e.g., `sqlx::postgres::PgPoolOptions`:
+```rust
+let pool = PgPoolOptions::new()
+    .max_connections(5)
+    .connect("postgres://postgres:password@localhost/test").await?;
 
+// Make a simple query to return the given parameter (use a question mark `?` instead of `$1` for MySQL/MariaDB)
+let row: (i64,) = sqlx::query_as("SELECT $1")
+    .bind(150_i64)
+    .fetch_one(&pool).await?;
+
+assert_eq!(row.0, 150);
+
+Ok(())
+```
 - [Actix-Web Shuttle Template](https://github.com/sentinel1909/shuttle-templat-actix): A somewhat opinionated template for getting started with an Actix Web API and hosting it on Shuttle.
 - [Atomic-Server](https://github.com/joepio/atomic-data-rust/): Graph database with a dynamic schema, authorization and full text search.
 - ***[Barricade](https://github.com/purton-tech/barricade): Quickly add user registration and logon to any application.***
