@@ -25,7 +25,7 @@ Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres
 - ***[mCaptcha](https://github.com/mCaptcha/mCaptcha/): Proof of work based, privacy focused, libre CAPTCHA system. Crates used: `actix-web`, `sqlx`, `redis`, and `lettre`.***
 - [MeiliSearch](https://github.com/meilisearch/MeiliSearch): Fast, Relevant and Typo-Tolerant Search Engine. Open source alternative to Algolia.
 - [Merino](https://github.com/mozilla-services/merino): Web service for Firefox Suggest.
-- [Nitro Repo](https://github.com/wherkamp/nitro_repo): An open source artifact manager. ***Rust back-end and Vue front-end.***
+- [Nitro Repo](https://github.com/wherkamp/nitro_repo): An open source artifact (build output) manager. ***Rust back-end and Vue front-end.***
 - [Operator](https://github.com/mkantor/operator): A web server for static and dynamic content.
 - [pict-rs](https://git.asonix.dog/asonix/pict-rs): An image host API service
 - [RCOS Telescope](https://github.com/rcos/Telescope): The RCOS (Ren,sse`lae,r /rɛnsəˈlɪər/ Polytechnic Institute) website and Discord bot.
