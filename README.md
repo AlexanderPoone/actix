@@ -1,7 +1,7 @@
 [Monorepo: Ease of code reuse](https://en.wikipedia.org/wiki/Monorepo)
 
 ## Usage
-* [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new( ... ) }`
+* [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new( ... ) }` ***CORS is also a Vite/Vue example !!!***
 * [deadpool_postgres::Client.prepare(&_stmt)](databases/postgres/src/db.rs) `-> Result<Vec<User>, MyError>`
 * [pg_mapper](cors/backend/src/main.rs)
 
