@@ -91,6 +91,7 @@ Ok(())
 - [Atomic-Server](https://github.com/joepio/atomic-data-rust/): Graph database with a dynamic schema, authorization and full text search.
 - ***[Barricade](https://github.com/purton-tech/barricade): Quickly add user registration and logon to any application.***
   - Interesting. Comes with hCaptcha too. 'Works well as a Kubernetes side car.'
+  - `use sqlx::PgPool;` as well. Postgres + Actix = nice combo
 - [binserve](https://github.com/mufeedvh/binserve): A fast, secure, and easy to set up static web server written on top of Actix Web with routing, templating, and various other features.
 - ***[Bloom](https://github.com/skerkour/bloom-legacy): The simplest way to de-Google your life and business: Inbox, Calendar, Files, Contacts & much more.***
   - [It uses Vuetify 2 (EOL) + Axios](https://github.com/skerkour/bloom-legacy/blob/fa91a0fcfb779a5657cbbbfaf9ea305e79570122/webapp/package.json)
