@@ -10,7 +10,7 @@ There's also a [chat sample](websockets/chat/static/index.html) parallel to Rock
 ----
 Refactor feedback management system
 
-using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `find()`, supports `send_keys()`) as backend
+using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `find()`, supports `send_keys()`, `By::{Id|Css}()`) as backend
 ```rust
 ////////////////////////
 // Sources:
@@ -31,31 +31,31 @@ use std::{thread, time::Duration};
 
 #[tokio::main]
 async fn main() -> WebDriverResult<()> {                          // <------ called by Actix, should stream progress !
- let caps = DesiredCapabilities::chrome();
- let driver = WebDriver::new("http://localhost:9515", caps).await?;
-
- driver.goto("https://wikipedia.org").await?;
- let elem_form = driver.find(By::Id("search-form")).await?;
-
- let elem_text = elem_form.find(By::Id("searchInput")).await?;
-
- elem_text.send_keys("selenium").await?;
- thread::sleep(Duration::from_millis(1500));
- elem_text.send_keys(Key::Control + "a").await?;
- thread::sleep(Duration::from_millis(500));
- elem_text.send_keys("thirtyfour" + Key::Enter).await?;
-
- let elem_button = elem_form.find(By::Css("button[type='submit']")).await?;
- elem_button.click().await?;
-
- // Look for header to implicitly wait for the page to load.
- driver.find(By::ClassName("firstHeading")).await?;
- assert_eq!(driver.title().await?, "Selenium - Wikipedia");
-
- // Always explicitly close the browser.
- driver.quit().await?;
-
- Ok(())
+    let caps = DesiredCapabilities::chrome();
+    let driver = WebDriver::new("http://localhost:9515", caps).await?;
+   
+    driver.goto("https://wikipedia.org").await?;
+    let elem_form = driver.find(By::Id("search-form")).await?;
+   
+    let elem_text = elem_form.find(By::Id("searchInput")).await?;
+   
+    elem_text.send_keys("selenium").await?;
+    thread::sleep(Duration::from_millis(1500));
+    elem_text.send_keys(Key::Control + "a").await?;
+    thread::sleep(Duration::from_millis(500));
+    elem_text.send_keys("thirtyfour" + Key::Enter).await?;
+   
+    let elem_button = elem_form.find(By::Css("button[type='submit']")).await?;
+    elem_button.click().await?;
+   
+    // Look for header to implicitly wait for the page to load.
+    driver.find(By::ClassName("firstHeading")).await?;
+    assert_eq!(driver.title().await?, "Selenium - Wikipedia");
+   
+    // Always explicitly close the browser.
+    driver.quit().await?;
+   
+    Ok(())
 }
 ```
 
