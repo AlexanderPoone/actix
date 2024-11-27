@@ -76,7 +76,7 @@ async fn main() -> std::io::Result<()> {
             .service(Files::new("/static", "./static"))
             .wrap(Logger::default())
     })
-    .workers(2)
+    .workers(2)     // <-------------------------------- WORKERS
     .bind(("127.0.0.1", 18080))?
     .run()
     .await
