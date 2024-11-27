@@ -1,3 +1,5 @@
+// use std::env;
+
 use actix_web::{web, App, Error, HttpResponse, HttpServer};
 use confik::{Configuration as _, EnvSource};
 use deadpool_postgres::{Client, Pool};
@@ -37,6 +39,14 @@ pub async fn add_user(
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     dotenv().ok();
+
+    // env::set_var("SERVER_ADDR", "127.0.0.1:18080");
+    // env::set_var("PG__USER", "test_user");
+    // env::set_var("PG__PASSWORD", "testing");
+    // env::set_var("PG__HOST", "127.0.0.1");
+    // env::set_var("PG__PORT","5432");
+    // env::set_var("PG__DBNAME","testing_db");
+    // env::set_var("PG__POOL_MAX_SIZE", "16");
 
     let config = ExampleConfig::builder()
         .override_with(EnvSource::new())

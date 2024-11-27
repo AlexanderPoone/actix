@@ -60,7 +60,7 @@ You may need to ensure that you are running the commands with the correct SQL us
 5. Create `.env` file:
 
    ```ini
-   SERVER_ADDR=127.0.0.1:8080
+   SERVER_ADDR=127.0.0.1:18080
    PG__USER=test_user
    PG__PASSWORD=testing
    PG__HOST=127.0.0.1
@@ -78,13 +78,13 @@ You may need to ensure that you are running the commands with the correct SQL us
 7. Using a different terminal send an HTTP POST request to the running server:
 
    ```shell
-   echo '{"email": "ferris@thecrab.com", "first_name": "ferris", "last_name": "crab", "username": "ferreal"}' | http -f --json --print h POST http://127.0.0.1:8080/users
+   echo '{"email": "ferris@thecrab.com", "first_name": "ferris", "last_name": "crab", "username": "ferreal"}' | http -f --json --print h POST http://127.0.0.1:18080/users
    ```
 
    **...or using curl...**
 
    ```shell
-   curl -i -d '{"email": "ferris@thecrab.com", "first_name": "ferris", "last_name": "crab", "username": "ferreal"}' -H 'Content-Type: application/json' http://127.0.0.1:8080/users
+   curl -i -d "{\"email\": \"ferris@thecrab.com\", \"first_name\": \"ferris\", \"last_name\": \"crab\", \"username\": \"ferreal\"}" -H "Content-Type: application/json" http://127.0.0.1:18080/users
    ```
 
    A unique constraint exists for username, so sending this request twice will return an internal server error (HTTP 500).
