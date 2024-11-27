@@ -6,7 +6,7 @@ Forked this repo to learn actix-web.
 There's also a [chat sample](websockets/chat/static/index.html) parallel to Rocket's! `const socket = new WebSocket(wsUri);` vs `const events = new EventSource(uri); events.addEventListener("message", (ev) => { ... }));` 'Exponential backoff reconnect'
 
 ----
-Refactor feedback management system
+Refactor feedback management system (Using actix + thirtyfour + rayon) (cf. [Ungoliant: rayon + reqwest](https://github.com/oscar-project/ungoliant/blob/main/Cargo.toml))
 
 using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `find()`, supports `send_keys()`, `By::{Id|Css}()`) as backend
 ```rust
@@ -56,8 +56,6 @@ async fn main() -> WebDriverResult<()> {                          // <------ cal
     Ok(())
 }
 ```
-
-cf. [Ungoliant: rayon + reqwest](https://github.com/oscar-project/ungoliant/blob/main/Cargo.toml) (actix + thirtyfour + rayon)
 
 ## Usage
 * [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new().wrap( ... ) }` ***CORS is also a [Vue ^3.3.4](https://github.com/AlexanderPoone/actix/blob/master/cors/frontend/package.json) sample !!! This is also a 'log in' sample.***
