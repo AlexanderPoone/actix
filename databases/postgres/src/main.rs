@@ -15,11 +15,13 @@ mod models;
 
 use self::{errors::MyError, models::User};
 
+// Every statement should take db_pool as parameter
 pub async fn get_users(db_pool: web::Data<Pool>) -> Result<HttpResponse, Error> {
     let client: Client = db_pool.get().await.map_err(MyError::PoolError)?;
 
     let users = db::get_users(&client).await?;
 
+    // actix Ok (<HttpResponse, Error>) inside rust Ok (Result)
     Ok(HttpResponse::Ok().json(users))
 }
 
@@ -38,7 +40,7 @@ pub async fn add_user(
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    dotenv().ok();
+    dotenv().ok();    // reads from `.env` file
 
     // env::set_var("SERVER_ADDR", "127.0.0.1:18080");
     // env::set_var("PG__USER", "test_user");
@@ -53,13 +55,14 @@ async fn main() -> std::io::Result<()> {
         .try_build()
         .unwrap();
 
+    // The db_pool used is `deadpool`
     let pool = config.pg.create_pool(None, NoTls).unwrap();
 
-    let server = HttpServer::new(move || {
+    let server = HttpServer::new(move || {     // memorise the boilerplate
         App::new().app_data(web::Data::new(pool.clone())).service(
-            web::resource("/users")
-                .route(web::post().to(add_user))
-                .route(web::get().to(get_users)),
+            web::resource("/users")    // same path "Creates a new resource for a specific path."
+                .route(web::post().to(add_user))    // but POST method
+                .route(web::get().to(get_users)),   // but GET method
         )
     })
     .bind(config.server_addr.clone())?

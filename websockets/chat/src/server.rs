@@ -119,7 +119,7 @@ impl Handler<Connect> for ChatServer {
     type Result = usize;
 
     fn handle(&mut self, msg: Connect, _: &mut Context<Self>) -> Self::Result {
-        println!("Someone joined");
+        println!("Someone joined");                 // TOOD: username?
 
         // notify all users in same room
         self.send_message("main", "Someone joined", 0);

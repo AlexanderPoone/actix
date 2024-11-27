@@ -61,7 +61,7 @@ async fn main() -> WebDriverResult<()> {                          // <------ cal
 * [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new().wrap( ... ) }` ***CORS is also a [Vue ^3.3.4](https://github.com/AlexanderPoone/actix/blob/master/cors/frontend/package.json) sample !!! This is also a 'log in' sample.***
 * [deadpool_postgres::Client.prepare(&_stmt)](databases/postgres/src/db.rs) `-> Result<Vec<User>, MyError>`
 * `client.query(&stmt, &[&user_info.email, &user_info.first_name, &user_info.last_name, &user_info.username,],)`
-* [pg_mapper](databases/postgres/README.md)
+* [pg_mapper](databases/postgres/src/models.rs)
 
 ## Community Showcase
 Many of these repos use [SQLX](https://github.com/launchbadge/sqlx) for Postgres, e.g., `sqlx::postgres::PgPoolOptions` (Pg for Postgres):
