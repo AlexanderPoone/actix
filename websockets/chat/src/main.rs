@@ -1,9 +1,8 @@
 use std::{
-    sync::{
+    env, sync::{
         atomic::{AtomicUsize, Ordering},
         Arc,
-    },
-    time::Instant,
+    }, time::Instant
 };
 
 use actix::*;
@@ -40,6 +39,7 @@ async fn chat_route(
 }
 
 /// Displays state
+/// TODO: How to do it in Rocket? There seems to have no such function in the example.
 async fn get_count(count: web::Data<AtomicUsize>) -> impl Responder {
     let current_count = count.load(Ordering::SeqCst);
     format!("Visitors: {current_count}")
@@ -57,7 +57,10 @@ async fn main() -> std::io::Result<()> {
     // start chat server actor
     let server = server::ChatServer::new(app_state.clone()).start();
 
-    log::info!("starting HTTP server at http://localhost:8080");
+    log::info!("starting HTTP server at http://localhost:18080");
+
+    let path = env::current_dir()?;
+    println!("The current directory is {}", path.display());
 
     HttpServer::new(move || {
         App::new()
@@ -66,11 +69,15 @@ async fn main() -> std::io::Result<()> {
             .service(web::resource("/").to(index))
             .route("/count", web::get().to(get_count))
             .route("/ws", web::get().to(chat_route))
+            // Use the following:
+            // cargo build
+            // cargo run --bin websocket-chat-server
+            // , otherwise the pwd will be /actix
             .service(Files::new("/static", "./static"))
             .wrap(Logger::default())
     })
     .workers(2)
-    .bind(("127.0.0.1", 8080))?
+    .bind(("127.0.0.1", 18080))?
     .run()
     .await
 }

@@ -20,7 +20,7 @@ Fancy shiny features:
 - `some message` - just string, send message to all peers in same room
 - client has to respond to heartbeat `Ping` messages, if server does not receive a heartbeat 'Pong' message for 10 seconds connection gets dropped
 
-2. [http://localhost:8080/count/](http://localhost:8080/count/) is a non-websocket endpoint and will affect and display state.
+2. [http://localhost:18080/count/](http://localhost:18080/count/) is a non-websocket endpoint and will affect and display state.
 
 To start server use the following
 
@@ -31,7 +31,7 @@ cargo run --bin websocket-chat-server
 
 ## WebSocket Browser Client
 
-- Open in browser: <http://localhost:8080/>.
+- Open in browser: <http://localhost:18080/>.
 - Use two tabs to set up a proper conversation.
 
 ## Python Client using aiohttp
