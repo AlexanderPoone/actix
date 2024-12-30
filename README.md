@@ -1,62 +1,6 @@
 <!--New!!! Your mom resorts to old ways - stability (...), Austria (which is old), Chinese geomancy (which is old), and the Pope (...) simutaneously.-->
 Forked this repo to learn actix-web.
 
-***actix + Vue is a popular and perfect combo***
-
-There's also a [chat sample](websockets/chat/static/index.html) parallel to Rocket's! `const socket = new WebSocket(wsUri);` vs `const events = new EventSource(uri); events.addEventListener("message", (ev) => { ... }));` 'Exponential backoff reconnect'
-
-----
-Refactor feedback management system (Using actix + thirtyfour + rayon) (cf. [Ungoliant: rayon + reqwest](https://github.com/oscar-project/ungoliant/blob/main/Cargo.toml))
-
-using `actix` + [thirtyfour](https://github.com/Vrtgs/thirtyfour) (`goto()`, `find()`, supports `send_keys()`, `By::{Id|Css}()`) as backend
-```rust
-////////////////////////
-// Sources:
-// 1. GoMa
-// 2. TrAd (bit trickier. searchbox can't be triggered)
-// 3. TrPi
-////////////////////////
-// Basic features:
-// a. Siame Netwo Simil (Keywo Searc)
-// b. Siame Netwo Simil (Dupli Remov, mostl hate speec)
-// c. Gende
-// d. Natio
-// e. Spam Remov
-////////////////////////
-
-use thirtyfour::prelude::*;
-use std::{thread, time::Duration};
-
-#[tokio::main]
-async fn main() -> WebDriverResult<()> {                          // <------ called by Actix, should stream progress !
-    let caps = DesiredCapabilities::chrome();
-    let driver = WebDriver::new("http://localhost:9515", caps).await?;
-   
-    driver.goto("https://wikipedia.org").await?;
-    let elem_form = driver.find(By::Id("search-form")).await?;
-   
-    let elem_text = elem_form.find(By::Id("searchInput")).await?;
-   
-    elem_text.send_keys("selenium").await?;
-    thread::sleep(Duration::from_millis(1500));
-    elem_text.send_keys(Key::Control + "a").await?;
-    thread::sleep(Duration::from_millis(500));
-    elem_text.send_keys("thirtyfour" + Key::Enter).await?;
-   
-    let elem_button = elem_form.find(By::Css("button[type='submit']")).await?;
-    elem_button.click().await?;
-   
-    // Look for header to implicitly wait for the page to load.
-    driver.find(By::ClassName("firstHeading")).await?;
-    assert_eq!(driver.title().await?, "Selenium - Wikipedia");
-   
-    // Always explicitly close the browser.
-    driver.quit().await?;
-   
-    Ok(())
-}
-```
-
 ## Usage
 * [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new().wrap( ... ) }` ***CORS is also a [Vue ^3.3.4](https://github.com/AlexanderPoone/actix/blob/master/cors/frontend/package.json) sample !!! This is also a 'log in' sample.***
 * [deadpool_postgres::Client.prepare(&_stmt)](databases/postgres/src/db.rs) `-> Result<Vec<User>, MyError>`
