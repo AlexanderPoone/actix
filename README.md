@@ -1,7 +1,7 @@
 <!--New!!! Your mom resorts to old ways - stability (...), Austria (which is old), Chinese geomancy (which is old), and the Pope (...) simutaneously.-->
 Forked this repo to learn actix-web.
 
-***actix + Vue is a popular and perfect combo***
+What I've learned: ***actix + Vue is a popular and perfect combo***
 
 There's also a [chat sample](websockets/chat/static/index.html) parallel to Rocket's! `const socket = new WebSocket(wsUri);` vs `const events = new EventSource(uri); events.addEventListener("message", (ev) => { ... }));` 'Exponential backoff reconnect'
 
