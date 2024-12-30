@@ -1,6 +1,10 @@
 <!--New!!! Your mom resorts to old ways - stability (...), Austria (which is old), Chinese geomancy (which is old), and the Pope (...) simutaneously.-->
 Forked this repo to learn actix-web.
 
+***actix + Vue is a popular and perfect combo***
+
+There's also a [chat sample](websockets/chat/static/index.html) parallel to Rocket's! `const socket = new WebSocket(wsUri);` vs `const events = new EventSource(uri); events.addEventListener("message", (ev) => { ... }));` 'Exponential backoff reconnect'
+
 ## Usage
 * [actix_cors::Cors::default()](cors/backend/src/main.rs) `move || { App::new().wrap( ... ) }` ***CORS is also a [Vue ^3.3.4](https://github.com/AlexanderPoone/actix/blob/master/cors/frontend/package.json) sample !!! This is also a 'log in' sample.***
 * [deadpool_postgres::Client.prepare(&_stmt)](databases/postgres/src/db.rs) `-> Result<Vec<User>, MyError>`
